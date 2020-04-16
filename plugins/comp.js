@@ -1,0 +1,26 @@
+import Vue from "vue";
+import LandingPage from "@/components/landingPage.vue";
+import ArticlePage from "@/components/articlePage.vue";
+import ProductPage from "@/components/productPage.vue";
+import HowToStep from "@/components/howToStep.vue";
+import Container from "@/components/container.vue";
+import Row from "@/components/row.vue";
+import Column from "@/components/column.vue";
+import Hero from "@/components/hero.vue";
+import ctaButton from "@/components/ctaButton.vue";
+import Product from "@/components/product.vue";
+import Wsvg from "@/components/wswg.vue";
+import Markdown from "@/components/markdown.vue";
+
+Vue.component("landingPage", LandingPage);
+Vue.component("articlePage", ArticlePage);
+Vue.component("productPage", ProductPage);
+Vue.component("howToStep", HowToStep);
+Vue.component("container", Container);
+Vue.component("row", Row);
+Vue.component("column", Column);
+Vue.component("hero", Hero);
+Vue.component("ctaButton", ctaButton);
+Vue.component("product", Product);
+Vue.component("wswg", Wsvg);
+Vue.component("markdown", Markdown);

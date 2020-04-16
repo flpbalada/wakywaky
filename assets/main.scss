@@ -1,0 +1,226 @@
+// File: custom.scss
+
+// Color system
+$custP: #4f2cff !default;
+$custS: #2cff4f !default;
+$custL: #7c9299 !default;
+$custD: #113b4d !default;
+
+$white: #fff !default;
+$gray-100: lighten($custP, 50%) !default;
+$gray-200: lighten($custP, 40%) !default;
+$gray-300: lighten($custP, 30%) !default;
+$gray-400: lighten($custP, 20%) !default;
+$gray-500: lighten($custP, 10%) !default;
+$gray-600: darken($custP, 10%) !default;
+$gray-700: darken($custP, 20%) !default;
+$gray-800: darken($custP, 30%) !default;
+$gray-900: darken($custP, 40%) !default;
+$black: #000 !default;
+
+$grays: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$grays: map-merge(
+  (
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900
+  ),
+  $grays
+);
+
+$blue: #007bff !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #28a745 !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
+$chartreuse: #83ff00 !default;
+$pumpkin: #ff7926 !default;
+$kellyGreen: #036d19 !default;
+
+$colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$colors: map-merge(
+  (
+    "blue": $blue,
+    "indigo": $indigo,
+    "purple": $purple,
+    "pink": $pink,
+    "red": $red,
+    "orange": $orange,
+    "yellow": $yellow,
+    "green": $green,
+    "teal": $teal,
+    "cyan": $cyan,
+    "white": $white,
+    "gray": $gray-600,
+    "gray-dark": $gray-800
+  ),
+  $colors
+);
+
+$primary: $custP !default;
+$secondary: $custS !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $pumpkin !default;
+$danger: $red !default;
+$light: $custL !default;
+$dark: $custD !default;
+
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "light": lighten($secondary, 20%),
+    "dark": darken($primary, 40%)
+  ),
+  $theme-colors
+);
+
+// Set a specific jump point for requesting color jumps
+$theme-color-interval: 8% !default;
+
+// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+$yiq-contrasted-threshold: 150 !default;
+
+// Customize the light and dark text colors for use in our YIQ color contrast function.
+$yiq-text-dark: $gray-900 !default;
+$yiq-text-light: $white !default;
+
+// Characters which are escaped by the escape-svg function
+$escaped-characters: (("<", "%3c"), (">", "%3e"), ("#", "%23")) !default;
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-caret: true !default;
+$enable-rounded: true !default;
+$enable-shadows: false !default;
+$enable-gradients: false !default;
+$enable-transitions: true !default;
+$enable-prefers-reduced-motion-media-query: true !default;
+$enable-hover-media-query: false !default; // Deprecated, no longer affects any compiled CSS
+$enable-grid-classes: true !default;
+$enable-pointer-cursor-for-buttons: true !default;
+$enable-print-styles: true !default;
+$enable-responsive-font-sizes: false !default;
+$enable-validation-icons: true !default;
+$enable-deprecation-messages: true !default;
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg: lighten($primary, 40%) !default;
+$body-color: darken($primary, 33%) !default;
+
+$link-color: darken($primary, 20%) !default;
+$link-decoration: none !default;
+$link-hover-color: darken($link-color, 15%) !default;
+$link-hover-decoration: underline !default;
+// Darken percentage for links with `.text-*` class (e.g. `.text-success`)
+$emphasized-link-hover-darken-percentage: 15% !default;
+
+$spacer: 1.2rem !default;
+$spacers: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+  (
+    0: 0,
+    1: (
+      $spacer * 0.4
+    ),
+    2: (
+      $spacer * 0.8
+    ),
+    3: $spacer,
+    4: (
+      $spacer * 1.6
+    ),
+    5: (
+      $spacer * 3.2
+    )
+  ),
+  $spacers
+);
+
+// Define common padding and border radius sizes and more.
+
+$line-height-lg: 1.8 !default;
+$line-height-sm: 1.5 !default;
+
+$border-radius: 0.5rem !default;
+$border-radius-lg: 0.6rem !default;
+$border-radius-sm: 0.4rem !default;
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+  "Liberation Mono", "Courier New", monospace !default;
+
+$font-family-sans-serif: $font-family-monospace !default;
+// stylelint-enable value-keyword-case
+
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg: $font-size-base * 1.25 !default;
+$font-size-sm: $font-size-base * 0.875 !default;
+
+$font-weight-lighter: lighter !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+$font-weight-bolder: 1000 !default;
+
+$font-weight-base: $font-weight-normal !default;
+$line-height-base: 1.6 !default;
+
+$headings-margin-bottom: $spacer !default;
+$headings-font-family: null !default;
+$headings-font-weight: 500 !default;
+$headings-line-height: 1.2 !default;
+$headings-color: null !default;
+
+$enable-responsive-font-sizes: true !default;
+
+$box-shadow-sm: 0 0 0.25rem rgba($gray-900, 0.2) !default;
+$box-shadow: 0 0 1rem rgba($gray-900, 0.2) !default;
+$box-shadow-lg: 0 0 3rem rgba($gray-900, 0.3) !default;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 900 !important;
+  letter-spacing: 1px !important;
+}
+
+// Include Bootstrap and BootstrapVue SCSS files
+@import "~bootstrap/scss/bootstrap.scss";
+@import "~bootstrap-vue/src/index.scss";

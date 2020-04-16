@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /404/
+Disallow: /kontakt/
+
+Sitemap: https://wakywaky.cz/sitemap.xml
