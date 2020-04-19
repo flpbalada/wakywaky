@@ -30,7 +30,7 @@
 export default {
   props: ["blok"],
   mounted() {
-    console.log(this.blok.cta);
+    console.log(this.$route);
   }
 };
 </script>

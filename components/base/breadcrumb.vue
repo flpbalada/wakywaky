@@ -1,7 +1,5 @@
 <template>
-  <b-row class="mt-5 mb-5">
-    {{ blok }}
-  </b-row>
+  <div></div>
 </template>
 
 <script>
