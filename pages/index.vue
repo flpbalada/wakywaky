@@ -18,7 +18,7 @@
             :key="i"
             class="mb-2"
             cols="12"
-            md="3"
+            md="4"
           >
             <b-link :to="item.link" :title="item.title" class="card shadow-lg">
               <b-card bg-variant="white" text-variant="dark">
@@ -68,14 +68,14 @@
 </template>
 
 <script>
-import wave from "~/components/wave.vue";
+import wave from "~/components/base/wave.vue";
 
 export default {
   components: {
     wave
   },
   methods: {
-    setSwitchedColumns: function(i) {
+    setSwitchedColumns(i) {
       return i % 2 == 1 ? "d-md-flex flex-row-reverse" : "";
     }
   },
@@ -101,8 +101,7 @@ export default {
               emoji: "🛒",
               title: "Srovnání wakeshopů",
               link: "/srovnani-wakeshopu"
-            },
-            { emoji: "📰", title: "Magazín wakeboardingu", link: "/magazin" }
+            }
           ]
         },
         pageparts: [
@@ -123,7 +122,7 @@ export default {
           {
             title: "Wakeparky — schválně, ve kterém tě sežere nejmíň komárů 🧛‍♀️",
             subTitle:
-              "Je pátek a tobě straší ve věži, protože nevíš kam na wejky? Hledej ve srovnaných wakepárcích. Jsou tam nejenom ty české, ale i zahraniční. Snažíme se připravit kompletní a nezávislý pohled na dané místo. Nejvíce se zaměřujeme na vodu, překážky, personál a to, kolik lidí na nás za den blbě čumělo.",
+              "Je pátek a tobě straší ve věži, protože nevíš kam na wejky žvějky? Hledej ve srovnaných wakeparcích. Jsou tam nejenom ty české, ale i ty zahraniční. Snažíme se připravit kompletní a nezávislý pohled na dané místo. Nejvíce se zaměřujeme na vodu, překážky, personál a míru všech návštěvníku ku těm co na nás koukali jako na voly.",
             button: {
               title: "Prohlédnou wakeparky",
               link: "/srovnani-wakeparku"
@@ -144,20 +143,6 @@ export default {
             img: {
               src: "wakeshops.jpg",
               alt: "srovnání wakeshopů"
-            }
-          },
-          {
-            title:
-              "Magazín wakywaky — aneb když to nejezdí, tak aby ses nenudil 🙏",
-            subTitle:
-              "Články, recenze, fotky, videa z wakeboarding světa. Vše na jednom místě v našem magazínů wakeboadingu. Nakoukej si třeba nové triky od profíků z videí. Pak nám pošli své a pokud to nebude případ hodinového žraločího tornáda, možná se od tebe ostatní také něco přiučí.",
-            button: {
-              title: "Pokračovat do magazínu",
-              link: "/magazin"
-            },
-            img: {
-              src: "wakemag.jpg",
-              alt: "magazín wakeboardingu"
             }
           }
         ]

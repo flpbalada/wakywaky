@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import logo from "./logo.vue";
+import logo from "~/components/base/logo.vue";
 
 export default {
   components: {
@@ -36,7 +36,6 @@ export default {
         { title: "Online waketrenér", route: "/online-trener-wakeboardingu" },
         { title: "Srovnání wakeparků", route: "/srovnani-wakeparku" },
         { title: "Srovnání wakeshopů", route: "/srovnani-wakeshopu" },
-        { title: "Magazín", route: "/magazin" },
         { title: "Kontakt", route: "/kontakt" }
       ]
     };

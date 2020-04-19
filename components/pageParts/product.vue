@@ -58,7 +58,7 @@
 </template>
 
 <script>
-import ctaButton from "./ctaButton.vue";
+import ctaButton from "~/components/base/ctaButton.vue";
 export default {
   components: {
     ctaButton

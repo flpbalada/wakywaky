@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import navbar from "~/components/navbar.vue";
-import footerNavbar from "~/components/footerNavbar.vue";
+import navbar from "~/components/pageParts/navbar.vue";
+import footerNavbar from "~/components/pageParts/footerNavbar.vue";
 
 export default {
   components: {
